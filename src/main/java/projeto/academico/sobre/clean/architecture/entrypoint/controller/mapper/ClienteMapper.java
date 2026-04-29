@@ -3,6 +3,8 @@ package projeto.academico.sobre.clean.architecture.entrypoint.controller.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import projeto.academico.sobre.clean.architecture.core.domain.Cliente;
+import projeto.academico.sobre.clean.architecture.entrypoint.controller.dto.BuscarClientePorIdDTO;
+import projeto.academico.sobre.clean.architecture.entrypoint.controller.dto.BuscarTodosClientesDTO;
 import projeto.academico.sobre.clean.architecture.entrypoint.controller.dto.ClienteDTO;
 
 @Mapper(componentModel = "spring")
@@ -11,4 +13,6 @@ public interface ClienteMapper {
     @Mapping(target = "endereco", ignore = true)
     @Mapping(target = "isValidCpf", ignore = true)
     Cliente toCliente(ClienteDTO clienteDTO);
+    BuscarClientePorIdDTO toBuscarClientePorIdDTO(Cliente cliente);
+    BuscarTodosClientesDTO toBuscarTodosClientesDTO(Cliente cliente);
 }

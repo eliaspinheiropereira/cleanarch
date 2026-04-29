@@ -9,7 +9,7 @@ import projeto.academico.sobre.clean.architecture.core.usecase.InserindoClienteU
 public class InserindoClienteUseCaseImpl implements InserindoClienteUseCase {
 
     private final SalvarCliente salvarCliente;
-    private BuscarEndereco buscarEndereco;
+    private final BuscarEndereco buscarEndereco;
 
     public InserindoClienteUseCaseImpl(SalvarCliente salvarCliente, BuscarEndereco buscarEndereco) {
         this.salvarCliente = salvarCliente;

@@ -7,4 +7,5 @@ import projeto.academico.sobre.clean.architecture.dataprovider.repository.entiti
 @Mapper(componentModel = "spring")
 public interface ClienteEntityMapper {
     ClienteEntity toClienteEntity(Cliente cliente);
+    Cliente toCliente(ClienteEntity clienteEntity);
 }
